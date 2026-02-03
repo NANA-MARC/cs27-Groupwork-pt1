@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbox AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <div>
+          <p class="app__kicker">Assistant IA</p>
+          <h1>Chatbox</h1>
+          <p class="app__subtitle">
+            Discutez avec votre API IA en temps réel.
+          </p>
+        </div>
+        <div class="app__endpoint">
+          <label for="apiUrl">URL API</label>
+          <input
+            id="apiUrl"
+            type="url"
+            value="http://localhost:8000/chat"
+            spellcheck="false"
+          />
+        </div>
+      </header>
+
+      <section class="chat">
+        <div id="messages" class="chat__messages" aria-live="polite"></div>
+
+        <form id="chatForm" class="chat__composer">
+          <input
+            id="messageInput"
+            type="text"
+            placeholder="Écrivez votre message..."
+            autocomplete="off"
+            required
+          />
+          <button id="sendButton" type="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
